@@ -11,3 +11,5 @@ To create a bitmap,
 .. image:: microbit_with_logo.jpg
 
 Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 pixels of twice the size.
+
+Text is rendered using the internal microbit fonts.
