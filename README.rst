@@ -8,7 +8,7 @@ To create a bitmap,
 4. Copy the generated file to the microbit using mu
 5. Use the function show_bitmap to display the file
 
-.. image:: microbit_with_logo.jpg
+.. figure:: microbit_with_logo.jpg
    :class: center
 
 Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 pixels of twice the size.
