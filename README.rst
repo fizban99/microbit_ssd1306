@@ -9,7 +9,7 @@ To create a bitmap,
 5. Use the function show_bitmap to display the file
 
 .. figure:: microbit_with_logo.jpg
-   :class: center
+   :align: center
 
 Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 pixels of twice the size.
 
