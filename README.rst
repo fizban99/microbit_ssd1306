@@ -6,4 +6,4 @@ To create a bitmap,
 3. Copy the generated file to the microbit using mu
 4. Use the function show_bitmap to display the file
 
-image:: microbit_logo.jpeg
+.. image:: microbit_logo.jpeg
