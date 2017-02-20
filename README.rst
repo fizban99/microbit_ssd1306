@@ -1,10 +1,11 @@
-Basic library to control the SSD1306 with a micro:bit
+Basic micropython library to control the OLED SSD1306 128x64 I2C with a micro:bit
 
 To create a bitmap, 
 
-1. Use the LCDAssistant (http://en.radzio.dxp.pl/bitmap_converter/) to generate the hex data. 
-2. Copy the hex data into the bitmap_converter.py file and run it on a computer.
-3. Copy the generated file to the microbit using mu
-4. Use the function show_bitmap to display the file
+1. Create a bitmap with an image editor with only 2 bits per pixel (black and white) 
+2. Use the LCDAssistant (http://en.radzio.dxp.pl/bitmap_converter/) to generate the hex data. 
+3. Copy the hex data into the bitmap_converter.py file and run it on a computer.
+4. Copy the generated file to the microbit using mu
+5. Use the function show_bitmap to display the file
 
 .. image:: microbit_with_logo.jpg
