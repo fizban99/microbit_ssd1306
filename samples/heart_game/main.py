@@ -1,5 +1,6 @@
-from ssd1306 import initialize, create_stamp
-from ssd1306 import draw_stamp, clear_oled, add_text
+from ssd1306 import initialize, clear_oled
+from ssd1306_stamp import create_stamp, draw_stamp
+from ssd1306_text import add_text
 from microbit import accelerometer, sleep, Image
 from random import randint
 
@@ -10,8 +11,6 @@ def move_stamp(x1, y1, x2, y2, stmp):
 
 
 initialize()
-# show_bitmap("microbit_logo")
-sleep(2000)
 clear_oled()
 stamp = create_stamp(Image.HEART)
 arrow = create_stamp(Image.ARROW_S)
@@ -36,9 +35,9 @@ while True:
         add_text(2, 3, "Score: " + str(score))
         sleep(1000)
         clear_oled()
-    if ax < x + 5 and ax > x and ay > y + 1 and ay < y + 7:
-        add_text(2, 2, "GAME OVER")
+    if not ((ax + 5 < x or x + 5 < ax) or (ay + 7 < y + 1 or y + 7 < ay+1)):
+        add_text(2, 1, "GAME OVER")
         add_text(2, 3, "Score: " + str(score))
         sleep(4000)
         clear_oled()
-        ay = 0
+        (score, ay, x)=(0, 0, 0)
