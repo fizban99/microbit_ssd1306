@@ -35,6 +35,7 @@ Preparation and displaying of a bitmap image
 Usage
 =====
 
-..code-block:: python
+.. code-block:: python
+
    import SSD1306_bitmap
 
