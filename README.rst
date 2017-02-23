@@ -18,6 +18,11 @@ Main features
 * Support of micro:bit Image object by transforming it into a stamp that can be displayed
 * Sample programs demonstrating the different functions
 
+.. contents::
+
+.. section-numbering::
+
+
 Preparation and displaying of a bitmap image
 ============================================
 
@@ -38,6 +43,7 @@ Usage
 
 show_bitmap(<filename>)
 -----------------------
+
 
 Will display on the OLED screen the image stored in the file 
 
