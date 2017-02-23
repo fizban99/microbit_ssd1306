@@ -35,7 +35,14 @@ Preparation and displaying of a bitmap image
 Usage
 =====
 
+show_bitmap(<filename>)
+-----------------------
+
+Will display on the OLED screen the image stored in the file 
+
 .. code-block:: python
 
-   import SSD1306_bitmap
+   from SSD1306_bitmap import show_bitmap
+   show_bitmap("microbit_logo")
+
 
