@@ -1,8 +1,27 @@
 Basic micropython library to control the OLED SSD1306 128x64 I2C with a micro:bit
 #################################################################################
 
+This library allows to control the typical low cost 0,96" OLED display sold in Amazon and eBay from a micro:bit.  
 
-To create a bitmap, 
+Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 dots of 4x4 pixels of size.
+
+Text is rendered using the internal microbit fonts.
+
+The library is distributed in different files to allow importing only the required funitons in order to reduce memory consumption.
+
+Main features
+=============
+
+* Load a 128x64 bitmap file
+* Set and get pixel value 
+* Render of text using the internal micro:bit font
+* Support of micro:bit Image object by transforming it into a stamp that can be displayed
+* Sample programs demonstrating the different functions
+
+Preparation of bitmap
+=====================
+
+o create a bitmap, 
 
 1. Create a bitmap with an image editor with only 2 bits per pixel (black and white) 
 2. Use the LCDAssistant (http://en.radzio.dxp.pl/bitmap_converter/) to generate the hex data. 
@@ -14,6 +33,4 @@ To create a bitmap,
       :width: 100%
       :align: center
 
-Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 pixels of twice the size.
 
-Text is rendered using the internal microbit fonts.
