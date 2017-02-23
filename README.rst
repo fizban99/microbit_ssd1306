@@ -11,7 +11,7 @@ To create a bitmap,
 5. Use the function show_bitmap to display the file
 
 .. class:: no-web
-   .. image:: microbit_with_logo.jpg
+   .. image:: https://cdn.rawgit.com/fizban99/microbit_ssd1306/7f60064d/microbit_with_logo.jpg
       :width: 100%
       :align: center
 
