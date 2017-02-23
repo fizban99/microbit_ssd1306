@@ -35,6 +35,7 @@ Preparation and displaying of a bitmap image
 Usage
 =====
 
+
 show_bitmap(<filename>)
 -----------------------
 
