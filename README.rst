@@ -42,7 +42,7 @@ Usage
 =====
 
 
-show_bitmap(<filename>)
+Show_bitmap(<filename>)
 -----------------------
 
 
