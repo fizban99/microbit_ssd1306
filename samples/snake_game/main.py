@@ -1,5 +1,5 @@
-from ssd1306 import initialize, set_px, get_px
-from ssd1306 import clear_oled
+from ssd1306 import initialize, clear_oled
+from ssd1306_px import get_px, set_px
 from microbit import accelerometer, button_b, button_a, sleep, display
 from random import randint
 from ssd1306_text import add_text
@@ -42,9 +42,8 @@ while True:
     xpos, ypos = 2, 2  # start in centre
     xv, yv = 1, 0  # start going right
     foodX, foodY = 0, 0
-    snake = []
     # snake is a list of tuples which are coordinates
-    snake.append((xpos, ypos))
+    snake = [(xpos, ypos), (xpos+1, ypos)]
     oldBrightness = 0  # start on dark pixel
     foodEaten, foodTimeout = True, 0
     # pick a speed, A reduces speed, B sets speed
