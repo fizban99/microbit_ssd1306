@@ -9,6 +9,11 @@ Text is rendered using the internal microbit fonts.
 
 The library is distributed in different files to allow importing only the required funitons in order to reduce memory consumption.
 
+.. contents::
+
+.. section-numbering::
+
+
 Main features
 =============
 
@@ -17,10 +22,6 @@ Main features
 * Render of text using the internal micro:bit font
 * Support of micro:bit Image object by transforming it into a stamp that can be displayed
 * Sample programs demonstrating the different functions
-
-.. contents::
-
-.. section-numbering::
 
 
 Preparation and displaying of a bitmap image
