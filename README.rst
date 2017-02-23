@@ -43,7 +43,7 @@ Usage
 
 
 Show_bitmap(<filename>)
------------------------
++++++++++++++++++++++++
 
 
 Will display on the OLED screen the image stored in the file 
