@@ -1,4 +1,6 @@
 Basic micropython library to control the OLED SSD1306 128x64 I2C with a micro:bit
+#################################################################################
+
 
 To create a bitmap, 
 
@@ -8,8 +10,10 @@ To create a bitmap,
 4. Copy the generated file to the microbit using mu
 5. Use the function show_bitmap to display the file
 
-.. figure:: microbit_with_logo.jpg
-   :align: center
+.. class:: no-web
+   .. image:: microbit_with_logo.jpg
+      :width: 100%
+      :align: center
 
 Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 pixels of twice the size.
 
