@@ -18,19 +18,23 @@ Main features
 * Support of micro:bit Image object by transforming it into a stamp that can be displayed
 * Sample programs demonstrating the different functions
 
-Preparation of bitmap
-=====================
-
-o create a bitmap, 
+Preparation and displaying of a bitmap image
+============================================
 
 1. Create a bitmap with an image editor with only 2 bits per pixel (black and white) 
 2. Use the LCDAssistant (http://en.radzio.dxp.pl/bitmap_converter/) to generate the hex data. 
 3. Copy the hex data into the bitmap_converter.py file and run it on a computer.
-4. Copy the generated file to the microbit using mu
-5. Use the function show_bitmap to display the file
+4. Flash a completely empty file from mu.
+5. Copy the generated file to the microbit using the file transfer function in mu
+6. Create a main.py file, import sdd1206_bitmap and use the function show_bitmap to display the file
 
    .. image:: https://cdn.rawgit.com/fizban99/microbit_ssd1306/7f60064d/microbit_with_logo.jpg
       :width: 100%
       :align: center
 
+Usage
+=====
+
+..code-block:: python
+   import SSD1306_bitmap
 
