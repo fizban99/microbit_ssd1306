@@ -57,7 +57,7 @@ set_px(x, y, color, draw=1)
 +++++++++++++++++++++++++++++
 
 
-Paints the pixel at position x,y with the corresponding color (0 dark or 1 lighted). 
+Paints the pixel at position x, y (of a 64x32 coordinate system) with the corresponding color (0 dark or 1 lighted). 
 If the optional parameter **draw** is set to 0 the screen will not be refreshed and **draw_screen()** needs to be called at a later stage, since multiple screen refreshes can be time consuming. This allows setting different pixels in the buffer without refreshing the screen, and finally refresh the display with the content of the buffer.
 
 .. code-block:: python
