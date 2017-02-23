@@ -42,15 +42,36 @@ Usage
 =====
 
 
-Show_bitmap(<filename>)
+show_bitmap(filename)
 +++++++++++++++++++++++
 
 
-Will display on the OLED screen the image stored in the file 
+Will display on the OLED screen the image stored in the file *filename*
 
 .. code-block:: python
 
    from SSD1306_bitmap import show_bitmap
    show_bitmap("microbit_logo")
 
+set_px(x, y, color, draw=1)
++++++++++++++++++++++++++++
+
+
+Will paint the pixel at position x,y with the corresponding color (0 dark or 1 lighted). 
+If draw=0 the screen will not be refreshed and *draw_screen()* needs to be called at a later stage, since multiple screen refreshes can be time consuming. This allows setting different pixels in the buffer without refreshing the screen, and finally refresh the display with the content of the buffer.
+
+.. code-block:: python
+
+   from SSD1306_px import set_px
+   from SSD1306 import draw_screen
+   set_px(10,10,1)
+   set_px(20,20,0,0)
+   draw_screen()
+
+
+get_px(x, y)
+++++++++++++
+
+
+Returns the color of the given pixel
 
