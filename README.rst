@@ -7,7 +7,7 @@ Due to the low memory of the micro:bit, all functions except for show_bitmap, wo
 
 Text is rendered using the internal microbit fonts.
 
-The library is distributed in different files to allow importing only the required funitons in order to reduce memory consumption.
+The library is distributed in different files to allow importing only the required functions in order to reduce memory consumption.
 
 .. contents::
 
