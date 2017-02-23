@@ -1,7 +1,7 @@
 Basic micropython library to control the OLED SSD1306 128x64 I2C with a micro:bit
 #################################################################################
 
-This library allows to control the typical low cost 0,96" OLED display sold in Amazon and eBay from a micro:bit.  
+This library allows the micro:bit to control the typical low cost 0,96" OLED display sold in Amazon and eBay.  
 
 Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 dots of 4x4 pixels of size.
 
