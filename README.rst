@@ -1,7 +1,9 @@
 Basic micropython library to control the OLED SSD1306 128x64 I2C with a micro:bit
 #################################################################################
 
-This library allows the micro:bit to control the typical low cost 0,96" OLED display sold in Amazon and eBay.  
+This library allows the micro:bit to control the typical low cost 0,96" OLED display sold in Amazon and eBay connected to the default I2C pins of the micro:bit. Some sort of breakout is required. Note that the Kitronik breakout does not have pre-soldered the I2C pins and you will need to attach some headers to access the I2C pins.
+
+You should connect the device’s SCL pin to micro:bit pin 19, and the device’s SDA pin to micro:bit pin 20. You also must connect the device’s ground to the micro:bit ground (pin GND). 
 
 Due to the low memory of the micro:bit, all functions except for show_bitmap, work in zoom mode, so the effective screen resolution is 64x32 dots of 4x4 pixels of size.
 
@@ -51,6 +53,7 @@ Displays on the OLED screen the image stored in the file *filename*. The image h
 .. code-block:: python
 
    from SSD1306_bitmap import show_bitmap
+   
    show_bitmap("microbit_logo")
 
 set_px(x, y, color, draw=1)
@@ -64,6 +67,7 @@ If the optional parameter **draw** is set to 0 the screen will not be refreshed 
 
    from SSD1306_px import set_px
    from SSD1306 import draw_screen
+   
    set_px(10,10,1)
    set_px(20,20,0,0)
    draw_screen()
@@ -78,6 +82,7 @@ Returns the color of the given pixel (0 dark 1 lighted)
 .. code-block:: python
 
    from SSD1306_px import get_px
+   
    color=get_px(10,10)
 
 
@@ -89,6 +94,7 @@ Prints the text given by **text** at the row x and column y. The screen is divid
 .. code-block:: python
 
    from SSD1306_text import add_text
+   
    add_text(0, 2, "Hello, world")
    
 
@@ -107,6 +113,7 @@ Draws the stamp on the screen at the pixel position x, y. The stamp will be prin
 
    from SSD1306_stamp import create_stamp, draw_stamp
    from microbit import Image
+   
    stamp = create_stamp(Image.HEART)
    draw_stamp(10, 10, stamp, 1)
    
