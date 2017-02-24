@@ -35,7 +35,8 @@ Preparation and displaying of a bitmap image
 4. Flash a completely empty file from mu.
 5. Copy the generated file to the micro:bit using the file transfer function in mu
 6. Create a main.py file, import sdd1306_bitmap and use the function show_bitmap to display the file
-7. Move both main.py, sdd1306.py and sdd1306_bitmap.py to the micro:bit with the file transfer function in mu
+7. Move the files main.py, sdd1306.py and sdd1306_bitmap.py to the micro:bit with the file transfer function in mu
+8. Reset the micro:bit or press CTRL+D in the Repl.
 
    .. image:: https://cdn.rawgit.com/fizban99/microbit_ssd1306/7f60064d/microbit_with_logo.jpg
       :width: 100%
