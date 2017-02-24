@@ -53,8 +53,11 @@ Displays on the OLED screen the image stored in the file *filename*. The image h
 
 .. code-block:: python
 
+   from SSD1306 import *
    from SSD1306_bitmap import show_bitmap
    
+   initialize()
+   clear_oled()
    show_bitmap("microbit_logo")
 
 set_px(x, y, color, draw=1)
@@ -69,6 +72,8 @@ If the optional parameter **draw** is set to 0 the screen will not be refreshed 
    from SSD1306_px import set_px
    from SSD1306 import draw_screen
    
+   initialize()
+   clear_oled()
    set_px(10,10,1)
    set_px(20,20,0,0)
    draw_screen()
@@ -82,8 +87,11 @@ Returns the color of the given pixel (0 dark 1 lighted)
 
 .. code-block:: python
 
+   from SSD1306 import *
    from SSD1306_px import get_px
    
+   initialize()
+   clear_oled()
    color=get_px(10,10)
 
 
@@ -94,8 +102,11 @@ Prints the text given by **text** at the row x and column y. The screen is divid
 
 .. code-block:: python
 
+   from SSD1306 import *
    from SSD1306_text import add_text
    
+   initialize()
+   clear_oled()
    add_text(0, 2, "Hello, world")
    
 
@@ -112,9 +123,12 @@ Draws the stamp on the screen at the pixel position x, y. The stamp will be prin
 
 .. code-block:: python
 
+   from SSD1306 import *
    from SSD1306_stamp import create_stamp, draw_stamp
    from microbit import Image
    
+   initialize()
+   clear_oled()
    stamp = create_stamp(Image.HEART)
    draw_stamp(10, 10, stamp, 1)
    
