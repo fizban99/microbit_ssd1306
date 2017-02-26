@@ -1,3 +1,4 @@
+# Snake game based on version of mavhc https://gist.github.com/mavhc/f424864db1d6dd728e8b
 from ssd1306 import initialize, clear_oled
 from ssd1306_px import get_px, set_px
 from microbit import accelerometer, button_b, button_a, sleep, display
