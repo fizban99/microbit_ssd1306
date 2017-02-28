@@ -128,7 +128,7 @@ Prints the text given by **text** at the row x and column y. The screen is divid
 create_stamp(img)
 +++++++++++++++++
 
-Creates a stamp from an Image object. A stamp is just a set of bytes that will be used to print the image on the OLED display. The function transforms any led value different than 0 to 1. This is used in combination of **draw_stamp** 
+Creates a stamp from an Image object. A stamp is just a set of bytes that will be used to print the image on the OLED display. The function transforms any led value different than 0 to 1. A stamp is defined with 5 columns of 8 pixels each, so a stamp occupies 5 bytes of memory and can also be defined as a bytearray of 5 bytes. If the stamp has been created from an Image, the stamp will be created centering the image. This command is used in combination of **draw_stamp** 
 
 
 draw_stamp(x, y, stamp, color, draw=1)
@@ -148,3 +148,16 @@ Draws the stamp on the screen at the pixel position x, y. The stamp will be prin
    stamp = create_stamp(Image.HEART)
    draw_stamp(10, 10, stamp, 1)
    
+
+When drawing a stamp, the contents of the screen just before the first column of the stamp and the content of the screen just after the last column of the stamp is also redrawn. This is done to allow using a function like this to perform a simple movement of a stamp:
+
+.. code-block:: python
+
+    def move_stamp(x1, y1, x2, y2, stmp):
+      draw_stamp(x1, y1, stmp, 0, 0)
+      draw_stamp(x2, y2, stmp, 1, 1)
+      
+      
+The previous function removes a stamp at position x1,y1 and redraws it at position x2, y2. Note that the first draw_stamp() does not refresh the screen. The screen is only refreshed once, with the second draw_stamp(). If the stamp is 5x5 and it is centered within the 8x7 area, the stamp will be properly updated if the distance between the two coordinates is maximum one pixel.
+
+
