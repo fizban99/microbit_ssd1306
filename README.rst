@@ -46,6 +46,20 @@ Library usage
 =============
 
 
+initialize()
++++++++++++++++++++++++
+
+
+You have to use this instruction before using the display. This puts the display in its reset status.
+
+
+clear_oled()
++++++++++++++++++++++++
+
+
+You will typically use this function after initialize(), in order to make sure that the display is blank at the beginning. 
+
+
 show_bitmap(filename)
 +++++++++++++++++++++++
 
