@@ -134,7 +134,7 @@ Creates a stamp from an Image object. A stamp is just a set of bytes that will b
 draw_stamp(x, y, stamp, color, draw=1)
 ++++++++++++++++++++++++++++++++++++++
 
-Draws the stamp on the screen at the pixel position x, y. The stamp will be printed using **OR** if color is 1 and **NAND** if color is 0, effectively removing the stamp when color=0.
+Draws the stamp on the screen at the pixel position x, y. The stamp will be printed using **OR** if color is 1 and **AND NOT** if color is 0, effectively removing the stamp when color=0.
 
 .. code-block:: python
 
