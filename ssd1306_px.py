@@ -16,7 +16,6 @@ def set_px(x, y, color, draw=1):
         ind] & ~ (1 << shiftPage)
     pack_into(">BB", screen, ind, b, b)
     if draw:
-        set_zoom(1)
         set_pos(x, page)
         i2c.write(0x3c, bytearray([0x40, b, b]))
 
