@@ -11,11 +11,11 @@ def mv_stmp(x1, y1, x2, y2, stmp):
 
 
 def init_star(i):
-    return randint(0, 1), randint(4, 58), randint(1, 4)
+    return randint(0, 1), randint(0, 58), randint(1, 4)
 
 
 initialize()
-show_bitmap("splash")
+show_bitmap("888.bin")
 while not (A.is_pressed() or B.is_pressed()):
     pass
 clear_oled()
