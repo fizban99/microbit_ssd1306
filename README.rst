@@ -161,3 +161,36 @@ When drawing a stamp, the contents of the screen just before the first column of
 The previous function removes a stamp at position x1,y1 and redraws it at position x2, y2. Note that the first draw_stamp() does not refresh the screen. The screen is only refreshed once, with the second draw_stamp(). If the stamp is 5x5 and it is centered within the 8x7 area, the stamp will be properly updated if the distance between the two coordinates is maximum one pixel.
 
 
+pulse(time=500)
++++++++++++++++++
+
+Modifies the contrast of the screen progressively to create  pulse effect. Thanks to Steve Stagg for his suggestion.
+
+.. code-block:: python
+
+   from SSD1306 import initialize, clear_oled
+   from SSD1306_bitmap import show_bitmap
+   from SSD1306_effects import pulse
+   
+   initialize()
+   clear_oled()
+   show_bitmap("microbit_logo")
+   pulse()
+   
+   
+   
+blink(time=1000)
++++++++++++++++++
+
+Makes the screen blink by switching it off and on.
+
+.. code-block:: python
+
+   from SSD1306 import initialize, clear_oled
+   from SSD1306_bitmap import show_bitmap
+   from SSD1306_effects import pulse
+   
+   initialize()
+   clear_oled()
+   show_bitmap("microbit_logo")
+   blink()
