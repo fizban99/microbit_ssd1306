@@ -11,3 +11,8 @@ Installation
 1. Flash an empty file with mu
 2. Use the file copy functionality of mu to copy the following files: main.py, splash, game_over, ssd1306.py, ssd1306_stamp.py and ssd1306_bitmap.py
 3. Reset the micro:bit
+
+
+   .. image:: bitflyer.PNG
+      :width: 100%
+      :align: center
