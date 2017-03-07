@@ -31,7 +31,7 @@ Preparation and displaying of a bitmap image
 
 1. Create a bitmap with an image editor with only 2 bits per pixel (black and white) 
 2. Use the LCDAssistant (http://en.radzio.dxp.pl/bitmap_converter/) to generate the hex data. 
-3. Copy the hex data into the bitmap_converter.py file and run it on a computer.
+3. Copy the hex data into the bitmap_converter.py file in the sample_images folder and run it on a computer with Python.
 4. Flash a completely empty file from mu.
 5. Copy the generated file to the micro:bit using the file transfer function in mu
 6. Create a main.py file, import sdd1306_bitmap and use the function show_bitmap to display the file
