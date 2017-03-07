@@ -68,8 +68,8 @@ Displays on the OLED screen the image stored in the file *filename*. The image h
 
 .. code-block:: python
 
-   from SSD1306 import initialize, clear_oled
-   from SSD1306_bitmap import show_bitmap
+   from ssd1306 import initialize, clear_oled
+   from ssd1306_bitmap import show_bitmap
    
    initialize()
    clear_oled()
@@ -84,8 +84,8 @@ If the optional parameter **draw** is set to 0 the screen will not be refreshed 
 
 .. code-block:: python
 
-   from SSD1306_px import set_px
-   from SSD1306 import draw_screen, initialize, clear_oled
+   from ssd1306_px import set_px
+   from ssd1306 import draw_screen, initialize, clear_oled
    
    initialize()
    clear_oled()
@@ -102,8 +102,8 @@ Returns the color of the given pixel (0 dark 1 lighted)
 
 .. code-block:: python
 
-   from SSD1306 import initialize, clear_oled
-   from SSD1306_px import get_px
+   from ssd1306 import initialize, clear_oled
+   from ssd1306_px import get_px
    
    initialize()
    clear_oled()
@@ -117,8 +117,8 @@ Prints the text given by **text** at the row x and column y. The screen is divid
 
 .. code-block:: python
 
-   from SSD1306 import initialize, clear_oled
-   from SSD1306_text import add_text
+   from ssd1306 import initialize, clear_oled
+   from ssd1306_text import add_text
    
    initialize()
    clear_oled()
@@ -138,9 +138,9 @@ Draws the stamp on the screen at the pixel position x, y. The stamp will be prin
 
 .. code-block:: python
 
-   from SSD1306 import initialize, clear_oled
-   from SSD1306_stamp import draw_stamp
-   from SSD1306_img import create_stamp
+   from ssd1306 import initialize, clear_oled
+   from ssd1306_stamp import draw_stamp
+   from ssd1306_img import create_stamp
    from microbit import Image
    
    initialize()
@@ -168,9 +168,9 @@ Modifies the contrast of the screen progressively to create  pulse effect. Thank
 
 .. code-block:: python
 
-   from SSD1306 import initialize, clear_oled
-   from SSD1306_bitmap import show_bitmap
-   from SSD1306_effects import pulse
+   from ssd1306 import initialize, clear_oled
+   from ssd1306_bitmap import show_bitmap
+   from ssd1306_effects import pulse
    
    initialize()
    clear_oled()
@@ -186,9 +186,9 @@ Makes the screen blink by switching it off and on.
 
 .. code-block:: python
 
-   from SSD1306 import initialize, clear_oled
-   from SSD1306_bitmap import show_bitmap
-   from SSD1306_effects import pulse
+   from ssd1306 import initialize, clear_oled
+   from ssd1306_bitmap import show_bitmap
+   from ssd1306_effects import pulse
    
    initialize()
    clear_oled()
