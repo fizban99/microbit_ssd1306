@@ -5,7 +5,6 @@ from ssd1306 import screen, set_pos, ADDR
 
 
 def draw_stamp(x, y, stamp, color, draw=1):
-    global screen
     page, shiftPage = divmod(y, 8)
     ind = (x << 1) + (page << 7) + 1
     if ind > 0:

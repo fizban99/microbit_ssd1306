@@ -70,7 +70,6 @@ def set_zoom(v):
 
 
 def draw_screen():
-    global screen
     set_zoom(1)
     set_pos()
     i2c.write(ADDR, screen)
