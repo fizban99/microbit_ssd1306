@@ -1,4 +1,8 @@
-from ssd1306 import *
+from microbit import i2c
+from ustruct import pack_into
+
+from ssd1306 import screen, set_pos, ADDR
+
 
 def draw_stamp(x, y, stamp, color, draw=1):
     global screen

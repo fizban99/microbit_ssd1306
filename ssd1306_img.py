@@ -1,5 +1,3 @@
-from ssd1306 import *
-
 def create_stamp(img):
     stamp = bytearray(5)
     for c in range(0, 5):

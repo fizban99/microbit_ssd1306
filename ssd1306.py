@@ -6,7 +6,7 @@
 # Only supports display type I2C128x64
 
 from microbit import i2c
-from ustruct import pack_into
+
 # LCD Control constants
 ADDR = 0x3C
 screen = bytearray(513)  # send byte plus pixels
