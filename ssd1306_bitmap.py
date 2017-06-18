@@ -1,4 +1,7 @@
-from ssd1306 import *
+from microbit import i2c
+
+from ssd1306 import command, set_zoom, set_pos, ADDR
+
 
 def show_bitmap(filename):
     set_pos()
@@ -8,4 +11,3 @@ def show_bitmap(filename):
             i2c.write(ADDR, b'\x40' + my_file.read(64))
     set_zoom(0)
     command([0xaf])
-

@@ -1,19 +1,13 @@
-# I2C LCD library for the micro:bit
-# Thanks to adafruit_Python_SSD1306 library by Dmitrii (dmitryelj@gmail.com)
-# Thanks to lopyi2c.py
-# Author: fizban99
-# v0.1 beta
-# Only supports display type I2C128x64
+from microbit import i2c
+from ustruct import pack_into
 
-from ssd1306 import *
+from ssd1306 import screen, set_pos
 
 
 def set_px(x, y, color, draw=1):
-    global screen
-    page, shiftPage = divmod(y, 8)
+    page, shift_page = divmod(y, 8)
     ind = x * 2 + page * 128 + 1
-    b = screen[ind] | (1 << shiftPage) if color else screen[
-        ind] & ~ (1 << shiftPage)
+    b = screen[ind] | (1 << shift_page) if color else screen[ind] & ~ (1 << shift_page)
     pack_into(">BB", screen, ind, b, b)
     if draw:
         set_pos(x, page)
@@ -21,8 +15,7 @@ def set_px(x, y, color, draw=1):
 
 
 def get_px(x, y):
-    global screen
-    page, shiftPage = divmod(y, 8)
+    page, shift_page = divmod(y, 8)
     ind = x * 2 + page * 128 + 1
-    b = (screen[ind] & (1 << shiftPage)) >> shiftPage
+    b = (screen[ind] & (1 << shift_page)) >> shift_page
     return b

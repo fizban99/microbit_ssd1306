@@ -1,11 +1,12 @@
-from ssd1306 import *
 from microbit import sleep
+
+from ssd1306 import command
 
 
 def blink(time=1000):
     for c in ([0xae], [0xaf]):
         command(c)
-        sleep(time/2)
+        sleep(time / 2)
 
 
 def pulse(time=500):
