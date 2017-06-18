@@ -11,4 +11,3 @@ def show_bitmap(filename):
             i2c.write(ADDR, b'\x40' + my_file.read(64))
     set_zoom(0)
     command([0xaf])
-

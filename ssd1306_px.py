@@ -8,8 +8,7 @@ def set_px(x, y, color, draw=1):
     global screen
     page, shiftPage = divmod(y, 8)
     ind = x * 2 + page * 128 + 1
-    b = screen[ind] | (1 << shiftPage) if color else screen[
-        ind] & ~ (1 << shiftPage)
+    b = screen[ind] | (1 << shiftPage) if color else screen[ind] & ~ (1 << shiftPage)
     pack_into(">BB", screen, ind, b, b)
     if draw:
         set_pos(x, page)
