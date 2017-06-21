@@ -188,7 +188,7 @@ Makes the screen blink by switching it off and on.
 
    from ssd1306 import initialize, clear_oled
    from ssd1306_bitmap import show_bitmap
-   from ssd1306_effects import pulse
+   from ssd1306_effects import blink
    
    initialize()
    clear_oled()
