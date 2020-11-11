@@ -52,6 +52,11 @@ initialize()
 
 You have to use this instruction before using the display. This puts the display in its reset status.
 
+Optional Parameters :
+`pinReset` : to specify the pin connected to the reset pin on displays using this function
+
+`i2cAddress` : to specify the i2c address of the screen, default address for the display is `0x3D`
+
 
 clear_oled()
 +++++++++++++++++++++++
