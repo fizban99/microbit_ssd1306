@@ -6,9 +6,12 @@
 # Only supports display type I2C128x64
 
 from microbit import i2c
+from microbit import *
 
 # LCD Control constants
-ADDR = 0x3C
+ADDR = 0x3D
+# For Adafruit OLED = 0x3D (0x7A)
+# For chinesse OLED = 0x3C (0x78)
 screen = bytearray(513)  # send byte plus pixels
 screen[0] = 0x40
 zoom = 1
@@ -18,7 +21,7 @@ def command(c):
     i2c.write(ADDR, b'\x00' + bytearray(c))
 
 
-def initialize():
+def initialize(i2cAddress = None, pinReset = None):
     cmd = [
         [0xAE],                     # SSD1306_DISPLAYOFF
         [0xA4],                     # SSD1306_DISPLAYALLON_RESUME
@@ -41,6 +44,15 @@ def initialize():
         [0xd6, 1],                  # zoom on
         [0xaf]                      # SSD1306_DISPLAYON
     ]
+    if i2cAddress:
+        ADDR = i2cAddress
+    if pinReset:
+        pinReset.write_digital(1)
+        sleep(1)
+        pinReset.write_digital(0)
+        sleep(10)
+        pinReset.write_digital(1)
+        sleep(10)
     for c in cmd:
         command(c)
 
