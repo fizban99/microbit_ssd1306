@@ -15,7 +15,7 @@ def init_star(i):
 
 
 initialize()
-show_bitmap("splash.bin")
+show_bitmap("splash")
 while not (A.is_pressed() or B.is_pressed()):
     pass
 clear_oled()
